@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опитування клієнтів - Кав'ярня "Ароматний Чашка"</title>
+    <link rel="stylesheet" href="styles/survey.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-coffee"></i> Кав'ярня "Ароматний Чашка"</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Головна</a></li>
+                    <li class="has-submenu">
+                        <a href="#"><i class="fas fa-utensils"></i> Меню &#9662;</a>
+                        <ul class="submenu">
+                            <li><a href="#">Кава</a></li>
+                            <li><a href="#">Чай</a></li>
+                            <li><a href="#">Десерти</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="survey.html" class="active"><i class="fas fa-poll"></i> Опитування</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> Новини</a></li>
+                    <li><a href="register.html"><i class="fas fa-user"></i> Реєстрація</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="survey-hero">
+        <div class="container">
+            <h2>Ми цінуємо вашу думку!</h2>
+            <p>Заповніть опитування, щоб допомогти нам покращити наші послуги.</p>
+        </div>
+    </section>
+
+    <section class="survey-form">
+        <div class="container">
+            <h2><i class="fas fa-poll-h"></i> Опитування</h2>
+            <form action="submit-survey.php" method="post">
+                <label for="name"><i class="fas fa-user"></i> Ваше ім'я:</label>
+                <input type="text" id="name" name="name" placeholder="Ім'я" required>
+
+                <label for="email"><i class="fas fa-envelope"></i> Електронна пошта:</label>
+                <input type="email" id="email" name="email" placeholder="Ваш email" required>
+
+                <label for="feedback"><i class="fas fa-comment-alt"></i> Ваші враження:</label>
+                <textarea id="feedback" name="feedback" rows="4" placeholder="Ваше повідомлення" required></textarea>
+
+                <label for="favorite_drink"><i class="fas fa-coffee"></i> Обране напій:</label>
+                <select id="favorite_drink" name="favorite_drink" required>
+                    <option value="">Оберіть напій</option>
+                    <option value="espresso">Еспресо</option>
+                    <option value="latte">Латте</option>
+                    <option value="cappuccino">Капучино</option>
+                    <option value="tea">Чай</option>
+                </select>
+
+                <fieldset>
+                    <legend><i class="fas fa-star"></i> Оцініть наш сервіс:</legend>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="excellent" name="service_rating" value="excellent" required>
+                            <label for="excellent">Відмінно</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="good" name="service_rating" value="good">
+                            <label for="good">Добре</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="average" name="service_rating" value="average">
+                            <label for="average">Задовільно</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="poor" name="service_rating" value="poor">
+                            <label for="poor">Погано</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Відправити</button>
+                <button type="reset" class="btn-secondary"><i class="fas fa-eraser"></i> Очистити</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Контакти: <i class="fas fa-envelope"></i> info@aromatny-chashka.com | <i class="fas fa-phone-alt"></i> Телефон: +38 099 999 9999</p>
+            <p>Усі права захищені &copy; 2024 Кав'ярня "Ароматний Чашка"</p>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">&#9650; Наверх</button>
+
+    <script src="js/survey.js"></script>
+</body>
+</html>
